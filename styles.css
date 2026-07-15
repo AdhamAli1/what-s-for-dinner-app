@@ -1,0 +1,249 @@
+:root {
+  --border-color: rgb(255, 237, 212);
+  --background-color: rgb(255, 252, 234);
+  --orange-color: rgb(246, 73, 0);
+  --red-color: rgb(251, 43, 55);
+  --blue-color: rgb(43, 127, 255);
+  --dark-grey-text: rgb(74, 85, 101);
+  --dark-grey-nav: rgb(106, 114, 130);
+  --dark-grey-text-dark: rgb(54, 65, 82);
+  --bachground-color-hover: rgb(255, 214, 168);
+  --icon-background: rgb(255, 237, 212);
+  --icon-background-hover: rgb(255, 214, 168);
+  --nutrition-card-bg: rgb(249, 250, 251);
+}
+
+.squared {
+  aspect-ratio: 1 / 1;
+  padding: 0.7rem 0.7rem;
+}
+
+.fs-14 {
+  font-size: 0.875rem;
+}
+
+.orange-color {
+  color: var(--orange-color);
+}
+
+.red-color {
+  color: var(--red-color);
+}
+
+.blue-color {
+  color: var(--blue-color);
+}
+
+.bg-orange-dark {
+  background: linear-gradient(to right, rgb(255, 96, 0), rgb(252, 64, 41));
+}
+
+.orange-background {
+  background-color: var(--background-color);
+}
+
+.border-orange {
+  border-color: var(--border-color);
+  --bs-border-color: var(--border-color);
+}
+
+.bg-icon {
+  background-color: var(--icon-background);
+}
+
+.bg-icon:hover {
+  background-color: var(--icon-background-hover);
+}
+
+.text-dark-grey {
+  color: var(--dark-grey-text);
+  --bs-nav-link-color: var(--dark-grey-text);
+}
+
+main .nav .text-dark-grey {
+  color: var(--dark-grey-nav);
+  --bs-nav-link-color: var(--dark-grey-nav);
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:focus {
+  color: var(--orange-color);
+  --bs-nav-link-color: var(--orange-color);
+  border-bottom: 2px solid var(--orange-color);
+}
+.nav-item:hover .nav-link {
+  color: var(--dark-grey-text-dark);
+  --bs-nav-link-hover-color: var(--dark-grey-text-dark);
+}
+
+.collapse .border-orange {
+  --bs-border-color: rgb(255, 184, 106);
+}
+
+.nav-icons i {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icons a:hover i {
+  color: var(--orange-color);
+}
+
+.nav-icons a:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .recipe-card {
+    height: 700px;
+  }
+}
+
+.recipe-details {
+  height: 100%;
+}
+
+.tab-content {
+  color: var(--dark-grey-text-dark);
+}
+
+@media (max-width: 1000px) {
+  .tab-content {
+    height: 350px;
+  }
+}
+
+.recipe-hero {
+  min-height: 420px;
+}
+
+@media (min-width: 1000px) {
+  .recipe-hero {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-hero {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 600) {
+  h1.fw-bolder {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-tabs .nav-link {
+    font-size: 0.85rem;
+    padding: 0.65rem 0.4rem;
+  }
+
+  .recipe-tabs .nav-link i {
+    margin-right: 0.25rem;
+  }
+}
+
+.recipe-tabs {
+  --bs-nav-tabs-border-width: 0;
+  gap: 0.25rem;
+}
+
+.recipe-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--dark-grey-nav);
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.recipe-tabs .nav-link i {
+  margin-right: 0.4rem;
+}
+
+.recipe-tabs .nav-link:hover {
+  color: var(--dark-grey-text-dark);
+  --bs-nav-tabs-link-hover-border-color: white;
+}
+
+.recipe-tabs .nav-link.active {
+  color: var(--orange-color);
+  border-bottom: 2px solid var(--orange-color);
+  background: transparent;
+}
+
+.badge-number {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.badge-number-lg {
+  width: 50px;
+  height: 50px;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
+
+.nutrition-card {
+  background-color: var(--nutrition-card-bg);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  height: 100%;
+}
+
+.nutrition-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.tips-list li {
+  background-color: var(--background-color);
+  border-left: 4px solid var(--orange-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tips-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tip-check {
+  color: var(--orange-color);
+  font-size: 1.1rem;
+  margin-right: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.btn-orange {
+  background: linear-gradient(to right, rgb(255, 96, 0), rgb(252, 64, 41));
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.btn-orange:hover {
+  color: #fff;
+  filter: brightness(1.05);
+}

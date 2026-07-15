@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="orange-background">
+    <nav
+      class="navbar navbar-expand-md bg-white py-3 border-bottom border-orange border-1 shadow-sm"
+    >
+      <div class="container-xxl">
+        <a class="rounded-circle squared bg-orange-dark me-2 shadow" href="#">
+          <i class="fa-solid fa-utensils text-white fs-5"></i>
+        </a>
+        <div class="d-flex flex-column justify-content-center">
+          <span class="fw-bold fs-4">What's For Dinner</span>
+          <p class="m-0 fs-14 text-secondary">Your daily meal inspiration</p>
+        </div>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex ms-auto align-items-center nav-icons">
+            <a class="me-3"
+              ><i class="fa-solid fa-bookmark text-dark-grey fs-5"></i
+            ></a>
+            <a class="me-3"
+              ><i class="fa-solid fa-clock-rotate-left text-dark-grey fs-5"></i
+            ></a>
+            <a class="me-3"
+              ><i class="fa-solid fa-gear text-dark-grey fs-5"></i
+            ></a>
+            <a class="me-3"
+              ><img
+                src="images/image.png"
+                alt=""
+                class="rounded-circle border border-2 border-orange"
+                width="40"
+                height="40"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div
+        class="container-xxl shadow my-4 bg-white border border-1 border-orange rounded-4 recipe-card overflow-hidden"
+      >
+        <div class="row h-100">
+          <div
+            class="col-lg-5 recipe-hero rounded-start-4"
+            id="recipeHero"
+            style="
+              background-image: url(images/teryaki.jpeg);
+              background-size: cover;
+              background-position: 50%;
+            "
+          >
+            <div class="d-flex flex-column justify-content-between h-100">
+              <div
+                class="d-flex align-items-center rounded-pill bg-white me-auto p-2 ms-2 mt-2"
+              >
+                <i class="fa-solid fa-star text-warning"></i>
+                <span class="mx-1 fw-bold" id="recipeRating">4.7</span>
+                <span class="text-secondary" id="recipeReviews">(367 reviews)</span>
+              </div>
+              <div
+                class="d-flex justify-content-around mx-3 mb-4 bg-white rounded-4 px-4 py-3"
+              >
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-clock orange-color fs-4 mb-1"></i>
+                  <span class="text-secondary fs-14">Prep Time</span>
+                  <p class="fw-bold mb-0" id="prepTime">15 min</p>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-fire-burner red-color fs-4 mb-1"></i>
+                  <span class="text-secondary fs-14">Cook Time</span>
+                  <p class="fw-bold mb-0" id="cookTime">20 min</p>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-users blue-color fs-4 mb-1"></i>
+                  <span class="text-secondary fs-14">Servings</span>
+                  <p class="fw-bold mb-0" id="servingsCount">2 people</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 p-3 p-md-4 d-flex flex-column recipe-details">
+            <div class="tags d-flex mb-3" id="recipeTags">
+              <span
+                class="me-2 bg-primary-subtle text-primary px-2 rounded-pill fs-14 fw-semibold"
+                >Easy</span
+              >
+              <span
+                class="me-2 bg-success-subtle text-success px-2 rounded-pill fs-14 fw-semibold"
+                >Asian</span
+              >
+            </div>
+            <div class="d-flex justify-content-between">
+              <div>
+                <h1 class="fw-bolder" id="recipeTitle">Teriyaki Chicken Bowl</h1>
+                <p id="recipeDescription">Sweet and savory chicken over rice with vegetables</p>
+              </div>
+              <div class="d-flex">
+                <button
+                  class="d-flex align-items-center justify-content-center bg-icon orange-color me-2 border-0 rounded-3"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="fa-solid fa-bookmark fs-6"></i>
+                </button>
+                <button
+                  class="d-flex align-items-center justify-content-center bg-icon orange-color border-0 rounded-3"
+                  style="width: 48px; height: 48px"
+                >
+                  <i class="fa-solid fa-share-nodes fs-6"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul class="nav nav-tabs recipe-tabs" id="recipeTab" role="tablist">
+              <li class="nav-item flex-grow-1 text-center" role="presentation">
+                <button
+                  class="nav-link active w-100"
+                  id="ingredients-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ingredients-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="ingredients-pane"
+                  aria-selected="true"
+                >
+                  <i class="fa-solid fa-list-check"></i>
+                  Ingredients
+                </button>
+              </li>
+              <li class="nav-item flex-grow-1 text-center" role="presentation">
+                <button
+                  class="nav-link w-100"
+                  id="instructions-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#instructions-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="instructions-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-book-open"></i>
+                  Instructions
+                </button>
+              </li>
+              <li class="nav-item flex-grow-1 text-center" role="presentation">
+                <button
+                  class="nav-link w-100"
+                  id="nutrition-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nutrition-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="nutrition-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-chart-pie"></i>
+                  Nutrition
+                </button>
+              </li>
+              <li class="nav-item flex-grow-1 text-center" role="presentation">
+                <button
+                  class="nav-link w-100"
+                  id="tips-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tips-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="tips-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-lightbulb"></i>
+                  Chefs Tips
+                </button>
+              </li>
+            </ul>
+
+            <hr class="my-4" />
+
+            <div class="tab-content flex-grow-1 overflow-auto" id="recipeTabContent">
+              <div
+                class="tab-pane fade show active orange-background rounded-4 px-4 py-3"
+                id="ingredients-pane"
+                role="tabpanel"
+                aria-labelledby="ingredients-tab"
+                tabindex="0"
+              >
+                <ul class="list-unstyled mb-0" id="ingredientsList">
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">1</span>
+                    <span>400g chicken thighs, sliced</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">2</span>
+                    <span>1/2 cup teriyaki sauce</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">3</span>
+                    <span>2 cups cooked rice</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">4</span>
+                    <span>1 broccoli head, florets</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">5</span>
+                    <span>1 carrot, julienned</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">6</span>
+                    <span>Sesame seeds</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">7</span>
+                    <span>Green onions, sliced</span>
+                  </li>
+                  <li class="d-flex align-items-center py-2">
+                    <span class="badge-number">8</span>
+                    <span>1 tablespoon sesame oil</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="instructions-pane"
+                role="tabpanel"
+                aria-labelledby="instructions-tab"
+                tabindex="0"
+              >
+                <ol class="list-unstyled instruction-list mb-0" id="instructionsList">
+                  <li class="d-flex align-items-center mb-4">
+                    <span class="badge-number badge-number-lg fs-5">1</span>
+                    <span
+                      >Heat sesame oil in a pan. Cook chicken until browned on
+                      all sides.</span
+                    >
+                  </li>
+                  <li class="d-flex align-items-center mb-4">
+                    <span class="badge-number badge-number-lg fs-5">2</span>
+                    <span
+                      >Add teriyaki sauce to chicken, simmer for 5 minutes until
+                      sauce thickens.</span
+                    >
+                  </li>
+                  <li class="d-flex align-items-center mb-4">
+                    <span class="badge-number badge-number-lg fs-5">3</span>
+                    <span
+                      >Meanwhile, steam broccoli and carrots until
+                      tender-crisp.</span
+                    >
+                  </li>
+                  <li class="d-flex align-items-center mb-4">
+                    <span class="badge-number badge-number-lg fs-5">4</span>
+                    <span>Divide rice between bowls.</span>
+                  </li>
+                  <li class="d-flex align-items-center mb-4">
+                    <span class="badge-number badge-number-lg fs-5">5</span>
+                    <span
+                      >Top with teriyaki chicken and steamed vegetables.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="nutrition-pane"
+                role="tabpanel"
+                aria-labelledby="nutrition-tab"
+                tabindex="0"
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-warning-subtle text-warning"
+                        >
+                          <i class="fa-solid fa-fire"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Calories</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionCalories">540 kcal</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-primary-subtle text-primary"
+                        >
+                          <i class="fa-solid fa-left-right"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Protein</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionProtein">42g</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-warning-subtle text-warning"
+                        >
+                          <i class="fa-solid fa-wheat-awn"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Carbohydrates</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionCarbs">58g</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-danger-subtle text-danger"
+                        >
+                          <i class="fa-solid fa-droplet"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Fat</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionFat">14g</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-success-subtle text-success"
+                        >
+                          <i class="fa-solid fa-leaf"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Fiber</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionFiber">4g</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="nutrition-card d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="nutrition-icon bg-danger-subtle text-danger"
+                        >
+                          <i class="fa-solid fa-cube"></i>
+                        </span>
+                        <span class="text-dark-grey fw-medium">Sodium</span>
+                      </div>
+                      <span class="fw-bold fs-5 text-black" id="nutritionSodium">1240mg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="tips-pane"
+                role="tabpanel"
+                aria-labelledby="tips-tab"
+                tabindex="0"
+              >
+                <ul class="list-unstyled tips-list mb-0" id="tipsList">
+                  <li class="d-flex align-items-center">
+                    <i class="fa-solid fa-circle-check tip-check"></i>
+                    <span>Use chicken thighs for juicier meat</span>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="fa-solid fa-circle-check tip-check"></i>
+                    <span
+                      >Make homemade teriyaki sauce for better flavor
+                      control</span
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="fa-solid fa-circle-check tip-check"></i>
+                    <span>Add edamame for extra protein</span>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="fa-solid fa-circle-check tip-check"></i>
+                    <span>Meal prep by cooking rice and chicken ahead</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <button class="btn btn-orange py-3 px-4 fw-semibold me-auto" id="tryAnotherBtn">
+              <i class="fa-solid fa-rotate me-2"></i>
+              Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
